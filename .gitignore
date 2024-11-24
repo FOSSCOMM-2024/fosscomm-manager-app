@@ -1,0 +1,11 @@
+.idea/
+error_log
+
+# We have a seperate repo for the email templates and will add them to the server manually.
+# The repo is: https://github.com/FOSSCOMM-2024/email-templates
+email-templates/
+
+# Ignore the uploads folder as it is not needed in the repo.
+uploads/
+
+*.log

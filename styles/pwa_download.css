@@ -1,0 +1,127 @@
+/* Base Styles for all screen sizes */
+#pwa-install-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 3em;
+    text-align: center;
+}
+
+#pwa-install-container img {
+    width: 30vw;
+    max-width: 150px; /* Restrict maximum width for large screens */
+    height: auto;
+    margin-bottom: 3em;
+}
+
+#pwa-install-container p {
+    font-size: 1.2em;
+    margin-bottom: 1em;
+    color: var(--color-text);
+}
+
+#pwa-install-container button {
+    padding: 1em 2em;
+    font-size: 1.5em;
+    background-color: var(--color-primary);
+    color: var(--color-text);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5em;
+    transition: all 0.3s ease;
+}
+
+#pwa-install-container button img {
+    width: 1.5em;
+    height: auto;
+    margin: 0;
+}
+
+#pwa-install-container button:hover {
+    background-color: var(--color-accent);
+    color: var(--color-text-dark);
+}
+
+/* Mobile-first Responsive Design */
+
+/* Small Screens: Mobile devices */
+@media (max-width: 600px) {
+    #pwa-install-container {
+        margin: 1em;
+    }
+
+    #pwa-install-container img {
+        width: 60vw;  /* Adjust image size for smaller screens */
+        max-width: 80vw;
+        margin-bottom: 2em;
+    }
+
+    #pwa-install-container p {
+        font-size: 1.1em;  /* Slightly smaller text for mobile */
+    }
+
+    #pwa-install-container button {
+        padding: 0.8em 1.5em;
+        font-size: 1.2em;  /* Smaller button size */
+    }
+
+    #pwa-install-container button img {
+        width: 1.2em;  /* Smaller icon size */
+    }
+}
+
+/* Medium Screens: Tablets and small laptops */
+@media (min-width: 601px) and (max-width: 1024px) {
+    #pwa-install-container {
+        margin: 2em;
+    }
+
+    #pwa-install-container img {
+        width: 25vw;  /* Adjust image size for tablets */
+        max-width: 120px;
+    }
+
+    #pwa-install-container p {
+        font-size: 1.3em;  /* Slightly larger text for tablets */
+    }
+
+    #pwa-install-container button {
+        padding: 1em 2em;
+        font-size: 1.4em;  /* Larger button for tablets */
+    }
+
+    #pwa-install-container button img {
+        width: 1.3em;
+    }
+}
+
+/* Large Screens: Laptops and Desktops */
+@media (min-width: 1025px) {
+    #pwa-install-container {
+        margin: 3em auto;
+        max-width: 800px;  /* Restrict max width for larger screens */
+    }
+
+    #pwa-install-container img {
+        width: 20vw;  /* Smaller image for larger screens */
+        max-width: 200px;
+    }
+
+    #pwa-install-container p {
+        font-size: 1.5em;
+    }
+
+    #pwa-install-container button {
+        padding: 1.2em 2.5em;
+        font-size: 1.5em;
+    }
+
+    #pwa-install-container button img {
+        width: 1.5em;
+    }
+}

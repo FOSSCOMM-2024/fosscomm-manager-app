@@ -1,0 +1,22 @@
+:root {
+    /* Base colors */
+    --color-primary: #201a2c;        /* Dark base color */
+    --color-secondary: #272430;      /* Secondary dark color */
+    --color-accent: #ea95ff;         /* Accent color */
+
+    /* Light variants */
+    --color-primary-light: #2a253b;  /* Lighter variant of primary */
+    --color-secondary-light: #3a3a4e; /* Lighter variant of secondary */
+    --color-accent-light: #f1a3ff;   /* Lighter variant of accent */
+
+    /* Dark variants */
+    --color-primary-dark: #0f1015;    /* Darker variant of primary */
+    --color-secondary-dark: #1b1b22;   /* Darker variant of secondary */
+    --color-accent-dark: #b76cd8;      /* Darker variant of accent */
+
+    /* Neutral colors */
+    --color-background: #ffffff;      /* Background color */
+    --color-text: #f8dbff;            /* Default text color */
+    --color-text-dark: #201a2c;       /* Dark text color for contrast */
+    --color-border: #272430;          /* Border color */
+}

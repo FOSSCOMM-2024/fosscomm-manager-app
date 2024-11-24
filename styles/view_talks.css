@@ -1,0 +1,12 @@
+.talks-header {
+    text-align: center;
+    margin: 1rem;
+    color: #ea95ff;
+}
+
+.talks {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+}

@@ -1,0 +1,22 @@
+{
+    "name": "FOSSCOMM 2024 Admin",
+    "short_name": "FOSSCOMM Admin",
+    "description": "The application for FOSSCOMM 2024 Organizers and Staff",
+    "start_url": "/index.php",
+    "display": "standalone",
+    "background_color": "#0f0b18",
+    "theme_color": "#ea95ff",
+    "icons": [
+      {
+        "src": "/assets/icon-192x192.png",
+        "sizes": "192x192",
+        "type": "image/png"
+      },
+      {
+        "src": "/assets/icon-512x512.png",
+        "sizes": "512x512",
+        "type": "image/png"
+      }
+    ]
+  }
+  

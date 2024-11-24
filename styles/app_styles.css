@@ -1,0 +1,45 @@
+@import "colors.css";
+
+body {
+    background-color: var(--color-primary-dark);
+}
+
+nav {
+    background-color: var(--color-secondary-dark);
+    color: var(--color-text);
+}
+
+nav h1 {
+    color: var(--color-accent) !important;
+    font-weight: bold;
+}
+
+.tool-card {
+    background-color: var(--color-accent-dark);
+}
+
+footer {
+    background-color: var(--color-secondary-dark) !important;
+    color: var(--color-text);
+}
+
+.pagination .page-item.disabled .page-link {
+    background-color: var(--color-secondary-light);
+    color: var(--color-accent-dark); /* Text color for disabled items */
+    pointer-events: none; /* Disable pointer events */
+}
+
+.pagination .page-item.active .page-link {
+    background-color: var(--color-accent-dark); /* Background color for active item */
+    color: white; /* Text color for active item */
+    border-color: var(--color-accent-dark); /* Border color for active item */
+}
+
+.pagination .page-item .page-link {
+    color: var(--color-secondary-dark); /* Default text color */
+}
+
+.pagination .page-item .page-link:hover {
+    background-color: var(--color-accent-light); /* Background color on hover */
+    color: var(--color-secondary-dark); /* Text color on hover */
+}

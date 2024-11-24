@@ -1,0 +1,48 @@
+name: Deploy to Production with FTP
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Set up PHP environment
+        uses: shivammathur/setup-php@v2
+        with:
+          php-version: '7.4'
+
+      - name: Update Application and DB Configuration
+        run: |
+          # Replace the 'host' value with the secret DB_HOST
+          sed -i "s/'host' => '.*'/'host' => '${{ secrets.DB_HOST }}'/g" app/config/database_config.php
+
+          # Replace the 'database' value with the secret DB_NAME (ensure underscores and numbers are handled)
+          sed -i "s/'database' => '.*'/'database' => '${{ secrets.DB_NAME }}'/g" app/config/database_config.php
+
+          # Replace the 'username' value with the secret DB_USERNAME
+          sed -i "s/'username' => '.*'/'username' => '${{ secrets.DB_USERNAME }}'/g" app/config/database_config.php
+
+          # Replace the 'password' value with the secret DB_PASSWORD (already working)
+          sed -i "s/'password' => '.*'/'password' => '${{ secrets.DB_PASSWORD }}'/g" app/config/database_config.php
+
+      - name: Upload entire repository to FTP server
+        uses: SamKirkland/FTP-Deploy-Action@v4.3.5
+        with:
+          local-dir: ./
+          server: ${{ secrets.FTP_SERVER }}
+          username: ${{ secrets.FTP_USERNAME_PROD }}
+          password: ${{ secrets.FTP_PASSWORD_PROD }}
+          port: ${{ secrets.FTP_PORT }}
+          exclude: |  # Exclude unnecessary directories
+            **/.git*
+            **/.git*/**
+            **/docs/**
+            **/nginx/**
+            **/.github/**
